@@ -84,3 +84,72 @@ const a = "b";
 a = "a";
 console.log(a);
 // su impresión es un error TypeError: Assignment to constant variable.
+
+let name = "Leonardo";
+let age = 34;
+
+//old way es5 asignación de valor a un objeto
+obj = { name: name, age: age };
+
+//es6 asignación de valor a un objeto
+obj2 = { name, age };
+
+console.log(obj);
+
+console.log(obj2);
+
+// funciones tipo flecha - arrow fuction
+
+const names = [
+  { name: "Leonardo", age: 32, country: "MX" },
+  { name: "Leonardo1", age: 33, country: "MX" },
+  { name: "Leonardo2", age: 34, country: "MX" },
+  { name: "Leonardo3", age: 35, country: "MX" },
+];
+
+let listOfNames = names.map(function (item) {
+  console.log(item.name);
+});
+let listOfNames2 = names.map((item) => console.log(item.name));
+
+// const listOfNames3 = (name,age) => { bloque de código más amigable con dos o más  parametro
+//     código ....
+// }
+
+// const listOfNames4 = name = > { bloque de código más amigable con un parametro
+//     código .....
+// }
+
+// const square = num => num * num;  código más amigable
+
+//
+
+//es6 trabajo de asincronismo con promesas
+
+const helloPromise = () => {
+  return new Promise((resolve, reject) => {
+    if (!true) {
+      resolve("Todo bien");
+    } else {
+      reject("Algo salió mal");
+    }
+  });
+};
+
+helloPromise()
+  .then((response) => console.log(response))
+  .then(() => console.log("Segunda respuesta"))
+  .catch((error) => console.log(error));
+
+/** Respuesta en la consola
+[Running] node "/home/app/personalprojects/ecmascript/src/es6/tempCodeRunnerFile.js"
+Todo bien
+Segunda respuesta
+
+[Done] exited with code=0 in 0.126 seconds
+
+[Running] node "/home/app/personalprojects/ecmascript/src/es6/tempCodeRunnerFile.js"
+Algo salió mal
+
+[Done] exited with code=0 in 0.124 seconds 
+   */
