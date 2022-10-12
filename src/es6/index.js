@@ -153,3 +153,45 @@ Algo salió mal
 
 [Done] exited with code=0 in 0.124 seconds 
    */
+
+//Clases y herencia
+
+// Aplicar programación orientada a objetos dentro de JS
+
+class Calculator {
+  constructor() {
+    this.valueA = 0;
+    this.valueB = 0;
+  }
+
+  sum(valueA, valueB) {
+    this.valueA = valueA;
+    this.valueB = valueB;
+    return this.valueA + this.valueB;
+  }
+}
+
+const calc = new Calculator();
+
+console.log(calc.sum(2, 3));
+
+// Import y Export
+import hello from "./module.js";
+console.log(hello());
+
+// Generadores usando yield y next() para iterarar sobre los valores, value
+
+function* helloWorld() {
+  if (true) {
+    yield "Hello, ";
+  }
+  if (true) {
+    yield "World ";
+  }
+}
+
+const generatorHello = helloWorld();
+
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
