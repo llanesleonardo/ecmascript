@@ -11,7 +11,6 @@ let { name, ...all } = obj;
 console.log(name, all);
 
 // impresión en consola
-//[Running] node "/home/app/personalprojects/ecmascript/src/es9/tempCodeRunnerFile.js"
 
 //Leonardo { age: 34, country: 'MX' }
 
